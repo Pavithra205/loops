@@ -1,0 +1,16 @@
+ prints the multiples of 3 from 1 to 30 using a do-while loop.
+
+public class Multiple{
+    public static void main(String[] args){
+        int a=1;
+        do{
+            if(a %3 ==0){
+            System.out.println(a);
+            }
+        a++;
+        }
+        while(a>=30);
+        
+    }
+}
+
