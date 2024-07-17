@@ -1,5 +1,6 @@
 # loops
-while
-do while
-for
+1.while
+2.do while
+3.for
+
 
