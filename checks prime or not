@@ -1,0 +1,47 @@
+#A program that asks the user to guess a number between 1 and 10. The program should keep asking until the user guesses the correct number using a do-while loop
+and a program that checks if a given number is a prime number. The program should keep asking for a number until the user enters a negative number. Use a while
+loop to keep asking for numbers and if-else statements to check if the number is prime
+
+import java.util.Scanner;
+
+public class  loops{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int guessnumber = 7; // You can choose any number between 1 and 10
+        int a;
+        System.out.println(" Guess a number between 1 and 10");
+        do {
+            System.out.print("Enter your guess: ");
+            a = scanner.nextInt();
+        } while (a != guessnumber);
+
+        System.out.println("Congratulations! You guessed the correct number.");
+
+        System.out.println(" Enter a number (negative number to exit)");
+        int number;
+        while (true) {
+            System.out.print("Enter a number: ");
+            number = scanner.nextInt();
+
+            if (number < 0) {
+                break;
+            }
+
+            if (isPrime(number)) {
+                System.out.println(number + " is a prime number.");
+            } else {
+                System.out.println(number + " is not a prime number.");
+            }
+
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
